@@ -30,6 +30,7 @@
 #ifndef NINEPATCHNODE_H
 #define NINEPATCHNODE_H
 
+#include <QtQuick/qsgninepatchnode.h>
 #include <private/qsgadaptationlayer_p.h>
 
 QT_BEGIN_NAMESPACE
@@ -39,11 +40,11 @@ class NinePatchNode : public QSGNinePatchNode
 public:    
     NinePatchNode();
 
-    void setTexture(QSGTexture *texture) override;
-    void setBounds(const QRectF &bounds) override;
-    void setDevicePixelRatio(qreal ratio) override;
-    void setPadding(qreal left, qreal top, qreal right, qreal bottom) override;
-    void update() override;
+    void setTexture(QSGTexture *texture);
+    void setBounds(const QRectF &bounds);
+    void setDevicePixelRatio(qreal ratio);
+    void setPadding(qreal left, qreal top, qreal right, qreal bottom);
+    void update();
 
     void paint(QPainter *painter);
 

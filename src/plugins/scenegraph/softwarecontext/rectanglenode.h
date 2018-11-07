@@ -38,21 +38,21 @@
 
 QT_BEGIN_NAMESPACE
 
-class RectangleNode : public QSGRectangleNode
+class RectangleNode : public QSGInternalRectangleNode
 {
 public:
     RectangleNode();
 
-    void setRect(const QRectF &rect) override;
-    void setColor(const QColor &color) override;
-    void setPenColor(const QColor &color) override;
-    void setPenWidth(qreal width) override;
-    void setGradientStops(const QGradientStops &stops) override;
-    void setRadius(qreal radius) override;
-    void setAntialiasing(bool antialiasing) override { Q_UNUSED(antialiasing) }
-    void setAligned(bool aligned) override;
+    void setRect(const QRectF &rect);
+    void setColor(const QColor &color);
+    void setPenColor(const QColor &color);
+    void setPenWidth(qreal width);
+    void setGradientStops(const QGradientStops &stops);
+    void setRadius(qreal radius);
+    void setAntialiasing(bool antialiasing) { Q_UNUSED(antialiasing) }
+    void setAligned(bool aligned);
 
-    void update() override;
+    void update();
 
     void paint(QPainter *);
 

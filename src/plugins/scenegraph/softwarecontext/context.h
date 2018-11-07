@@ -50,10 +50,10 @@ class RenderContext : public QSGRenderContext
 {
 public:
     RenderContext(QSGContext *ctx);
-    void initialize(QOpenGLContext *context) override;
+    void initialize(QOpenGLContext *context);
     void initializeIfNeeded();
     void invalidate() override;
-    void renderNextFrame(QSGRenderer *renderer, GLuint fbo) override;
+    void renderNextFrame(QSGRenderer *renderer, uint fbo) override;
     QSGTexture *createTexture(const QImage &image, uint flags = CreateTexture_Alpha) const override;
     QSGRenderer *createRenderer() override;
 

@@ -168,7 +168,7 @@ QSGRenderer *RenderContext::createRenderer()
 }
 
 
-void RenderContext::renderNextFrame(QSGRenderer *renderer, GLuint fbo)
+void RenderContext::renderNextFrame(QSGRenderer *renderer, uint fbo)
 {
     QSGRenderContext::renderNextFrame(renderer, fbo);
 }

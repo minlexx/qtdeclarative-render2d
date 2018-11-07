@@ -80,24 +80,24 @@ void qDrawBorderPixmap(QPainter *painter, const QRect &targetRect, const QMargin
 
 }
 
-class ImageNode : public QSGImageNode
+class ImageNode : public QSGInternalImageNode
 {
 public:
     ImageNode();
 
-    void setTargetRect(const QRectF &rect) override;
-    void setInnerTargetRect(const QRectF &rect) override;
-    void setInnerSourceRect(const QRectF &rect) override;
-    void setSubSourceRect(const QRectF &rect) override;
-    void setTexture(QSGTexture *texture) override;
-    void setMirror(bool mirror) override;
-    void setMipmapFiltering(QSGTexture::Filtering filtering) override;
-    void setFiltering(QSGTexture::Filtering filtering) override;
-    void setHorizontalWrapMode(QSGTexture::WrapMode wrapMode) override;
-    void setVerticalWrapMode(QSGTexture::WrapMode wrapMode) override;
-    void update() override;
+    void setTargetRect(const QRectF &rect);
+    void setInnerTargetRect(const QRectF &rect);
+    void setInnerSourceRect(const QRectF &rect);
+    void setSubSourceRect(const QRectF &rect);
+    void setTexture(QSGTexture *texture);
+    void setMirror(bool mirror);
+    void setMipmapFiltering(QSGTexture::Filtering filtering);
+    void setFiltering(QSGTexture::Filtering filtering);
+    void setHorizontalWrapMode(QSGTexture::WrapMode wrapMode);
+    void setVerticalWrapMode(QSGTexture::WrapMode wrapMode);
+    void update();
 
-    void preprocess() override;
+    void preprocess();
 
     void paint(QPainter *painter);
 
