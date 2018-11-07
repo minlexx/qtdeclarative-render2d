@@ -56,6 +56,7 @@ public:
     void renderNextFrame(QSGRenderer *renderer, uint fbo) override;
     QSGTexture *createTexture(const QImage &image, uint flags = CreateTexture_Alpha) const override;
     QSGRenderer *createRenderer() override;
+    int maxTextureSize() const override;
 
     QWindow *currentWindow;
     bool m_initialized;

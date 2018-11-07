@@ -167,6 +167,13 @@ QSGRenderer *RenderContext::createRenderer()
     return new Renderer(this);
 }
 
+int RenderContext::maxTextureSize() const
+{
+    // d3d12 render context returns a constant here, related to Direct 3D internals
+    return 16384; // D3D12_REQ_TEXTURE2D_U_OR_V_DIMENSION
+    // TODO: what should we return?
+}
+
 
 void RenderContext::renderNextFrame(QSGRenderer *renderer, uint fbo)
 {
